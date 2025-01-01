@@ -1,0 +1,26 @@
+CAPI=2:
+name: ucsb:r2fft:hdl
+description: R2FFT HDL
+
+filesets:
+    rtl:
+        files: 
+            - bfp_bitWidthAcc.sv
+            - bfp_bitWidthDetector.sv
+            - bfp_maxBitWidth.sv
+            - bfp_Shifter.sv
+            - bitReverseCounter.sv
+            - butterflyCore.sv
+            - butterflyUnit.sv
+            - fftAddressGenerator.sv
+            - R2FFT.sv
+            - radix2Butterfly.sv
+            - ramPipelineBridge.sv
+            - readBusMux.sv
+            - twiddleFactorRomBridge.sv
+            - writeBusMux.sv
+        file_type: systemVerilogSource
+
+targets:
+    default:
+        filesets: [rtl]

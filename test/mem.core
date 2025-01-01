@@ -1,0 +1,14 @@
+CAPI=2:
+name: ucsb:r2fft:mem
+description: R2FFT Memories
+
+filesets:
+    rtl:
+        files: 
+            - dpram.sv
+            - twrom.sv
+        file_type: systemVerilogSource
+
+targets:
+    default:
+        filesets: [rtl]

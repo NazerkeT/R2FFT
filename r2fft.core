@@ -1,0 +1,25 @@
+CAPI=2:
+name: ucsb:r2fft:1024
+description: R2FFT ASIC evaluation
+
+filesets:
+    rtl:
+        depend:
+            - ucsb:r2fft:hdl
+            - ucsb:r2fft:mem
+        file_type: systemVerilogSource
+
+targets:
+    default:
+        filesets: [rtl]
+    asic:
+        default_tool: design_compiler
+        filesets: [rtl]
+        toplevel: [r2fft_top]
+        tools:
+            design_compiler:
+                script_dir: $R2FFT_DESIGN_ROOT/dc
+                dc_script: r2fft.tcl
+                target_library: $R2FFT_DESIGN_ROOT/NangateOpenCellLibrary.db
+                libs: $R2FFT_DESIGN_ROOT/NangateOpenCellLibrary.db
+
