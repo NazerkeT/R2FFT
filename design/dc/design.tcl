@@ -1,6 +1,6 @@
 set hdlin_use_sv_include 1
 
-set hdlin_sv_blackbox_modules [list "dpram" "twrom" ]
+set hdlin_sv_blackbox_modules [list "dpram" "twrom" "twiddleFactorRomBridge" ]
 
 source $READ_SOURCES.tcl
 

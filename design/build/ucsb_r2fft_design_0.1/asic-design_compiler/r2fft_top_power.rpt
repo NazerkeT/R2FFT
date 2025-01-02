@@ -1,0 +1,65 @@
+Information: Propagating switching activity (high effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black box outputs. (PWR-428)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort high
+Design : r2fft_top
+Version: R-2020.09-SP4
+Date   : Thu Jan  2 14:46:36 2025
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /fs/student/nturtayeva/R2FFT/design/NangateOpenCellLibrary.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+r2fft_top              5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+r2fft_top                              1.67e+03 2.38e+03 1.90e+05 4.24e+03 100.0
+  uR2FFT (R2FFT_FFT_LENGTH1024_FFT_DW16_PL_DEPTH3)
+                                       1.36e+03 2.38e+03 1.90e+05 3.94e+03  92.8
+    writeBusMuxOdd (writeBusMux_FFT_N10_FFT_DW16_MODE_INPUT_STREAM0_MODE_RUN_FFT1_MODE_DMA2_MODE_DISABLE3_0)
+                                          2.915    3.972 1.85e+03    8.739   0.2
+    writeBusMuxEven (writeBusMux_FFT_N10_FFT_DW16_MODE_INPUT_STREAM0_MODE_RUN_FFT1_MODE_DMA2_MODE_DISABLE3_1)
+                                          2.913    3.953 1.86e+03    8.728   0.2
+    readBusMuxOdd (readBusMux_FFT_N10_FFT_DW16_MODE_INPUT_STREAM0_MODE_RUN_FFT1_MODE_DMA2_MODE_DISABLE3_0)
+                                          1.049    1.001  440.008    2.490   0.1
+    readBusMuxEven (readBusMux_FFT_N10_FFT_DW16_MODE_INPUT_STREAM0_MODE_RUN_FFT1_MODE_DMA2_MODE_DISABLE3_1)
+                                          1.049    1.000  439.911    2.489   0.1
+    ubutterflyUnit (butterflyUnit_FFT_N10_FFT_DW16_FFT_BFPDW5_PL_DEPTH3)
+                                       1.34e+03 2.28e+03 1.69e+05 3.78e+03  89.2
+    ufftAddressGenerator (fftAddressGenerator_FFT_N10_STAGE_COUNT_BW4)
+                                          0.636   17.459 3.70e+03   21.793   0.5
+    ubfpacc (bfp_bitWidthAcc_FFT_BFPDW5_FFT_DW16)
+                                          1.584   23.426 3.24e+03   28.245   0.7
+    ubfp_maxBitWidthIstream (bfp_maxBitWidth_FFT_BFPDW5_1)
+                                          1.309    7.224  989.258    9.522   0.2
+    uistreamBitWidthDetector (bfp_bitWidthDetector_FFT_BFPDW5_FFT_DW16_1)
+                                          7.188    5.910 3.11e+03   16.211   0.4
+    ubitReverseCounter (bitReverseCounter_BIT_WIDTH10)
+                                          3.059   18.145 1.93e+03   23.136   0.5
+1

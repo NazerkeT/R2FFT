@@ -1,0 +1,61 @@
+version: 0.2.1
+name: ucsb_r2fft_design_0.1
+toplevel: r2fft_top
+dependencies:
+  ucsb:r2fft:hdl:0.1: []
+  ucsb:r2fft:design:0.1:
+  - ucsb:r2fft:hdl:0.1
+parameters: {}
+tool_options:
+  design_compiler:
+    script_dir: /fs/student/nturtayeva/R2FFT/design/dc
+    dc_script: design.tcl
+    target_library: /fs/student/nturtayeva/R2FFT/design/NangateOpenCellLibrary.db
+    libs: /fs/student/nturtayeva/R2FFT/design/NangateOpenCellLibrary.db
+filters: []
+flow_options: {}
+hooks: {}
+files:
+- file_type: systemVerilogSource
+  name: ../../../../hdl/bfp_bitWidthAcc.sv
+  core: ucsb:r2fft:hdl:0.1
+- file_type: systemVerilogSource
+  name: ../../../../hdl/bfp_bitWidthDetector.sv
+  core: ucsb:r2fft:hdl:0.1
+- file_type: systemVerilogSource
+  name: ../../../../hdl/bfp_maxBitWidth.sv
+  core: ucsb:r2fft:hdl:0.1
+- file_type: systemVerilogSource
+  name: ../../../../hdl/bfp_Shifter.sv
+  core: ucsb:r2fft:hdl:0.1
+- file_type: systemVerilogSource
+  name: ../../../../hdl/bitReverseCounter.sv
+  core: ucsb:r2fft:hdl:0.1
+- file_type: systemVerilogSource
+  name: ../../../../hdl/butterflyCore.sv
+  core: ucsb:r2fft:hdl:0.1
+- file_type: systemVerilogSource
+  name: ../../../../hdl/butterflyUnit.sv
+  core: ucsb:r2fft:hdl:0.1
+- file_type: systemVerilogSource
+  name: ../../../../hdl/fftAddressGenerator.sv
+  core: ucsb:r2fft:hdl:0.1
+- file_type: systemVerilogSource
+  name: ../../../../hdl/R2FFT.sv
+  core: ucsb:r2fft:hdl:0.1
+- file_type: systemVerilogSource
+  name: ../../../../hdl/radix2Butterfly.sv
+  core: ucsb:r2fft:hdl:0.1
+- file_type: systemVerilogSource
+  name: ../../../../hdl/ramPipelineBridge.sv
+  core: ucsb:r2fft:hdl:0.1
+- file_type: systemVerilogSource
+  name: ../../../../hdl/readBusMux.sv
+  core: ucsb:r2fft:hdl:0.1
+- file_type: systemVerilogSource
+  name: ../../../../hdl/writeBusMux.sv
+  core: ucsb:r2fft:hdl:0.1
+- file_type: systemVerilogSource
+  name: ../../../../hdl/r2fft_top.sv
+  core: ucsb:r2fft:hdl:0.1
+vpi: []

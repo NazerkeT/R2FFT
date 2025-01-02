@@ -1,5 +1,5 @@
 CAPI=2:
-name: ucsb:r2fft:hdl
+name: ucsb:r2fft:hdl:0.1
 description: R2FFT HDL
 
 filesets:
@@ -17,8 +17,8 @@ filesets:
             - radix2Butterfly.sv
             - ramPipelineBridge.sv
             - readBusMux.sv
-            - twiddleFactorRomBridge.sv
             - writeBusMux.sv
+            - r2fft_top.sv
         file_type: systemVerilogSource
 
 targets:

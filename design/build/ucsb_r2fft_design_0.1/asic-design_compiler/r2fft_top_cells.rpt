@@ -1,0 +1,28 @@
+ 
+****************************************
+Report : reference
+Design : r2fft_top
+Version: R-2020.09-SP4
+Date   : Thu Jan  2 14:46:36 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+R2FFT_FFT_LENGTH1024_FFT_DW16_PL_DEPTH3
+                               9420.123896       1   9420.123896  b, h, n
+dpram                             0.000000       2      0.000000  b
+twrom                             0.000000       1      0.000000  b
+-----------------------------------------------------------------------------
+Total 3 references                                   9420.123896
+1

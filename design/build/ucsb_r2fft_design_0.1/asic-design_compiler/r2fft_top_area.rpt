@@ -1,0 +1,66 @@
+ 
+****************************************
+Report : area
+Design : r2fft_top
+Version: R-2020.09-SP4
+Date   : Thu Jan  2 14:46:35 2025
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /fs/student/nturtayeva/R2FFT/design/NangateOpenCellLibrary.db)
+
+Number of ports:                         2216
+Number of nets:                          7344
+Number of cells:                         4624
+Number of combinational cells:           3797
+Number of sequential cells:               805
+Number of macros/black boxes:               0
+Number of buf/inv:                        569
+Number of references:                       3
+
+Combinational area:               5786.298026
+Buf/Inv area:                      306.166003
+Noncombinational area:            3633.825870
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  9420.123896
+Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------------------------------------------------------------------------------------
+r2fft_top                         9420.1239    100.0     0.0000     0.0000  0.0000  r2fft_top
+uR2FFT                            9420.1239    100.0   114.1140    50.2740  0.0000  R2FFT_FFT_LENGTH1024_FFT_DW16_PL_DEPTH3
+uR2FFT/readBusMuxEven               21.0140      0.2    21.0140     0.0000  0.0000  readBusMux_FFT_N10_FFT_DW16_MODE_INPUT_STREAM0_MODE_RUN_FFT1_MODE_DMA2_MODE_DISABLE3_1
+uR2FFT/readBusMuxOdd                21.0140      0.2    21.0140     0.0000  0.0000  readBusMux_FFT_N10_FFT_DW16_MODE_INPUT_STREAM0_MODE_RUN_FFT1_MODE_DMA2_MODE_DISABLE3_0
+uR2FFT/ubfp_maxBitWidthIstream      45.7520      0.5    23.1420    22.6100  0.0000  bfp_maxBitWidth_FFT_BFPDW5_1
+uR2FFT/ubfpacc                     153.7480      1.6    94.9620    58.7860  0.0000  bfp_bitWidthAcc_FFT_BFPDW5_FFT_DW16
+uR2FFT/ubitReverseCounter           88.0460      0.9    42.8260    45.2200  0.0000  bitReverseCounter_BIT_WIDTH10
+uR2FFT/ubutterflyUnit             8472.8979     89.9     4.7880   425.0680  0.0000  butterflyUnit_FFT_N10_FFT_DW16_FFT_BFPDW5_PL_DEPTH3
+uR2FFT/ubutterflyUnit/ubfp_maxBitWidth   44.9540     0.5   22.3440   22.6100 0.0000 bfp_maxBitWidth_FFT_BFPDW5_0
+uR2FFT/ubutterflyUnit/ubutterflyCore 7998.0879    84.9    0.0000    0.0000  0.0000  butterflyCore_FFT_N10_FFT_DW16_FFT_BFPDW5_PL_DEPTH3
+uR2FFT/ubutterflyUnit/ubutterflyCore/inputStagePipeline  959.7280    10.2  127.6800  832.0480 0.0000 ramPipelineBridge_FFT_N10_FFT_DW16_1
+uR2FFT/ubutterflyUnit/ubutterflyCore/outputStagePipeline  959.7280    10.2  127.6800  832.0480 0.0000 ramPipelineBridge_FFT_N10_FFT_DW16_0
+uR2FFT/ubutterflyUnit/ubutterflyCore/ubfp_bitWidth  225.8340     2.4  225.8340    0.0000 0.0000 bfp_bitWidthDetector_FFT_BFPDW5_FFT_DW16_0
+uR2FFT/ubutterflyUnit/ubutterflyCore/uradix2bt 5366.0180    57.0 4066.0760 1299.9420 0.0000 radix2Butterfly_FFT_DW16_FFT_N10_PL_DEPTH3
+uR2FFT/ubutterflyUnit/ubutterflyCore/ushifter0  121.5620     1.3  121.5620    0.0000 0.0000 bfp_Shifter_FFT_DW16_FFT_BFPDW5_3
+uR2FFT/ubutterflyUnit/ubutterflyCore/ushifter1  121.2960     1.3  121.2960    0.0000 0.0000 bfp_Shifter_FFT_DW16_FFT_BFPDW5_2
+uR2FFT/ubutterflyUnit/ubutterflyCore/ushifter2  122.0940     1.3  122.0940    0.0000 0.0000 bfp_Shifter_FFT_DW16_FFT_BFPDW5_1
+uR2FFT/ubutterflyUnit/ubutterflyCore/ushifter3  121.8280     1.3  121.8280    0.0000 0.0000 bfp_Shifter_FFT_DW16_FFT_BFPDW5_0
+uR2FFT/ufftAddressGenerator        161.1960      1.7   115.9760    45.2200  0.0000  fftAddressGenerator_FFT_N10_STAGE_COUNT_BW4
+uR2FFT/uistreamBitWidthDetector    126.0840      1.3   126.0840     0.0000  0.0000  bfp_bitWidthDetector_FFT_BFPDW5_FFT_DW16_1
+uR2FFT/writeBusMuxEven              82.9920      0.9    82.9920     0.0000  0.0000  writeBusMux_FFT_N10_FFT_DW16_MODE_INPUT_STREAM0_MODE_RUN_FFT1_MODE_DMA2_MODE_DISABLE3_1
+uR2FFT/writeBusMuxOdd               82.9920      0.9    82.9920     0.0000  0.0000  writeBusMux_FFT_N10_FFT_DW16_MODE_INPUT_STREAM0_MODE_RUN_FFT1_MODE_DMA2_MODE_DISABLE3_0
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------------------------------------------------------------------------------------
+Total                                                 5786.2980  3633.8259  0.0000
+
+1
